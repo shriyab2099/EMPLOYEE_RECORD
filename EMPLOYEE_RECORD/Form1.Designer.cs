@@ -65,6 +65,7 @@ namespace EMPLOYEE_RECORD
             this.button1.TabIndex = 1;
             this.button1.Text = "New";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
@@ -160,6 +161,7 @@ namespace EMPLOYEE_RECORD
             this.button3.TabIndex = 12;
             this.button3.Text = "Update";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -169,22 +171,25 @@ namespace EMPLOYEE_RECORD
             this.button4.TabIndex = 13;
             this.button4.Text = "Delete";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(86, 236);
+            this.label6.Location = new System.Drawing.Point(122, 236);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(124, 18);
+            this.label6.Size = new System.Drawing.Size(47, 18);
             this.label6.TabIndex = 15;
-            this.label6.Text = "MaritalStatus";
+            this.label6.Text = "Role";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
-            "Married",
-            "Unmarried"});
+            "CEO",
+            "Manager",
+            "Clerk"});
             this.comboBox2.Location = new System.Drawing.Point(230, 228);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(140, 26);
