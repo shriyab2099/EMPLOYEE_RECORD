@@ -45,6 +45,9 @@ namespace EMPLOYEE_RECORD
             this.button4 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.image1 = new System.Windows.Forms.PictureBox();
+            this.button5 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.image1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -61,7 +64,7 @@ namespace EMPLOYEE_RECORD
             // 
             this.button1.Location = new System.Drawing.Point(122, 288);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(75, 29);
             this.button1.TabIndex = 1;
             this.button1.Text = "New";
             this.button1.UseVisualStyleBackColor = true;
@@ -147,7 +150,7 @@ namespace EMPLOYEE_RECORD
             // 
             this.button2.Location = new System.Drawing.Point(230, 288);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(75, 29);
             this.button2.TabIndex = 11;
             this.button2.Text = "Insert";
             this.button2.UseVisualStyleBackColor = true;
@@ -167,7 +170,7 @@ namespace EMPLOYEE_RECORD
             // 
             this.button4.Location = new System.Drawing.Point(461, 288);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(75, 29);
             this.button4.TabIndex = 13;
             this.button4.Text = "Delete";
             this.button4.UseVisualStyleBackColor = true;
@@ -195,11 +198,33 @@ namespace EMPLOYEE_RECORD
             this.comboBox2.Size = new System.Drawing.Size(140, 26);
             this.comboBox2.TabIndex = 14;
             // 
+            // image1
+            // 
+            this.image1.Location = new System.Drawing.Point(470, 128);
+            this.image1.Name = "image1";
+            this.image1.Size = new System.Drawing.Size(76, 81);
+            this.image1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.image1.TabIndex = 16;
+            this.image1.TabStop = false;
+            // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button5.Location = new System.Drawing.Point(470, 215);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(76, 29);
+            this.button5.TabIndex = 17;
+            this.button5.Text = "Browse";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.image1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.button4);
@@ -222,6 +247,7 @@ namespace EMPLOYEE_RECORD
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.image1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -245,6 +271,8 @@ namespace EMPLOYEE_RECORD
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.PictureBox image1;
+        private System.Windows.Forms.Button button5;
     }
 }
 
