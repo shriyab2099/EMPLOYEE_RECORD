@@ -17,6 +17,7 @@ namespace EMPLOYEE_RECORD
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Lenovo\source\repos\EMPLOYEE_RECORD\EMPLOYEE_RECORD\EmployeeDatabase.mdf;Integrated Security=True");
         String imageLocation = "";
         SqlCommand cmd;
+        SqlDataReader reader;
 
         public Form1()
         {
@@ -123,6 +124,60 @@ namespace EMPLOYEE_RECORD
             {
                 MessageBox.Show("An Error occured", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        public void UploadFile(string file)
+        {
+            con.Open();
+            FileStream fstream = File.OpenRead(file);
+            byte[] contents = new byte[fstream.Length];
+            fstream.Read(contents, 0, (int)fstream.Length);
+            fstream.Close();
+            using (cmd = new SqlCommand("INSERT INTO FileInfo(staffID,Files) VALUES(@staffID,@Files) ",con))
+            {
+                cmd.Parameters.AddWithValue("@staffID", textBox1.Text);
+                cmd.Parameters.AddWithValue("@Files", contents);
+                cmd.ExecuteNonQuery();
+            }
+            MessageBox.Show("File uploaded","uploaded",MessageBoxButtons.OK,MessageBoxIcon.Information);
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog dlg = new OpenFileDialog() { Filter = "Text Documents (*.pdf;) |*.pdf", ValidateNames = true })
+            {
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    DialogResult dialog = MessageBox.Show("Are you sure you want to upload file?", "upload box", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    string filename = dlg.FileName;
+                    UploadFile(filename);
+                }
+                else
+                {
+                    return;
+                }
+            }
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
