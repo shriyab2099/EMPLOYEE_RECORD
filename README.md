@@ -10,10 +10,6 @@ The Employee Records Management System is a program developed in C# and .NET for
 - Update existing employee records.
 - Search for employees by name or other criteria.
 
-## Image Forgery Detection
-
-In addition to employee record management, this project also includes functionality for image forgery detection. The system takes an image dataset as input, preprocesses and cleans the data, extracts features based on image masks, and trains deep learning models such as CNN and Transfer Learning. Error Level Analysis (ELA) is used to identify noise in the images, determining whether they are forged or pristine.
-
 ## Tools and Frameworks
 
 - .NET Framework
